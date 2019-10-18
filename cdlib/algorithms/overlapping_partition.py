@@ -23,7 +23,6 @@ from cdlib.algorithms.internal import LEMON
 from cdlib.algorithms.internal.SLPA_nx import slpa_nx
 from cdlib.algorithms.internal.multicom import MultiCom
 from cdlib.algorithms.internal import BIGCLAM
-print(Angel_loaded)
 
 __all__ = ["ego_networks", "demon", "angel", "node_perception", "overlapping_seed_set_expansion", "kclique", "lfm",
            "lais2", "congo", "conga", "lemon", "slpa", "multicom", "big_clam"]
