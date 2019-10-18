@@ -117,7 +117,7 @@ def angel(g, threshold, min_community_size=3):
 
     .. note:: Reference implementation: https://github.com/GiulioRossetti/ANGEL
     """
-    if Angel==None:
+    if Angel is None:
         try:
             from angel import Angel
         except ModuleNotFoundError:
