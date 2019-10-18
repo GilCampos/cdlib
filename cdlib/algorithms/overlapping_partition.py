@@ -6,6 +6,8 @@ try:
     from angel import Angel
 except ModuleNotFoundError:
     Angel = None
+    print("pouet")
+print("puit")
     
         
 from demon import Demon
