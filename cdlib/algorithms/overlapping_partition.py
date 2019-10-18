@@ -4,11 +4,8 @@ except ModuleNotFoundError:
     ig = None
 try:
     from angel import Angel
-    Angel_loaded=True
-    print(Angel_loaded)
 except ModuleNotFoundError:
     Angel = None
-    Angel_loaded=False
     
         
 from demon import Demon
@@ -121,8 +118,7 @@ def angel(g, threshold, min_community_size=3):
 
     .. note:: Reference implementation: https://github.com/GiulioRossetti/ANGEL
     """
-    print(Angel_loaded)
-    if Angel_loaded!=True:
+    if Angel==None:
         try:
             from angel import Angel
         except ModuleNotFoundError:
