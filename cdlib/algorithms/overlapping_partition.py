@@ -5,6 +5,7 @@ except ModuleNotFoundError:
 try:
     from angel import Angel
     Angel_loaded=True
+    print(Angel_loaded)
 except ModuleNotFoundError:
     Angel = None
     Angel_loaded=False
@@ -25,7 +26,7 @@ from cdlib.algorithms.internal import LEMON
 from cdlib.algorithms.internal.SLPA_nx import slpa_nx
 from cdlib.algorithms.internal.multicom import MultiCom
 from cdlib.algorithms.internal import BIGCLAM
-
+print(Angel_loaded)
 
 __all__ = ["ego_networks", "demon", "angel", "node_perception", "overlapping_seed_set_expansion", "kclique", "lfm",
            "lais2", "congo", "conga", "lemon", "slpa", "multicom", "big_clam"]
@@ -120,6 +121,7 @@ def angel(g, threshold, min_community_size=3):
 
     .. note:: Reference implementation: https://github.com/GiulioRossetti/ANGEL
     """
+    print(Angel_loaded)
     if Angel_loaded!=True:
         try:
             from angel import Angel
