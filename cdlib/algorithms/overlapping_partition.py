@@ -1,7 +1,14 @@
 try:
     import igraph as ig
 except ModuleNotFoundError:
-        ig = None
+    ig = None
+try:
+    from angel import Angel
+    Angel_loaded=True
+except ModuleNotFoundError:
+    Angel = None
+    Angel_loaded=False
+    
         
 from demon import Demon
 from cdlib.algorithms.internal.NodePerception import NodePerception
@@ -23,7 +30,7 @@ from cdlib.algorithms.internal import BIGCLAM
 __all__ = ["ego_networks", "demon", "angel", "node_perception", "overlapping_seed_set_expansion", "kclique", "lfm",
            "lais2", "congo", "conga", "lemon", "slpa", "multicom", "big_clam"]
 
-Angel_loaded=False
+
 
 def ego_networks(g, level=1):
     """
