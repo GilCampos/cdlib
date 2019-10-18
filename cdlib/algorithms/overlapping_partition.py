@@ -2,7 +2,7 @@ try:
     import igraph as ig
 except ModuleNotFoundError:
         ig = None
-Angel_loaded=false
+Angel_loaded=False
 
 from demon import Demon
 from cdlib.algorithms.internal.NodePerception import NodePerception
