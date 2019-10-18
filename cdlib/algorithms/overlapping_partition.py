@@ -119,7 +119,8 @@ def angel(g, threshold, min_community_size=3):
 
     .. note:: Reference implementation: https://github.com/GiulioRossetti/ANGEL
     """
-    #if Angel is None:
+    if Angel is None:
+        print("test")
     #    try:
     #        from angel import Angel
     #    except ModuleNotFoundError:
@@ -129,8 +130,6 @@ def angel(g, threshold, min_community_size=3):
         raise ModuleNotFoundError("Optional dependency not satisfied: install igraph to use the selected feature.")
     if Angel is None:
         raise ModuleNotFoundError("Optional dependency not satisfied: install angel-cd library to use the selected feature (likely pip install angel-cd).")
-    else:
-        Angel_loaded=True
     g = convert_graph_formats(g, ig.Graph)
     with suppress_stdout():
         a = Angel(graph=g, min_comsize=min_community_size, threshold=threshold, save=False)
