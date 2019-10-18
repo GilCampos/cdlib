@@ -119,11 +119,11 @@ def angel(g, threshold, min_community_size=3):
 
     .. note:: Reference implementation: https://github.com/GiulioRossetti/ANGEL
     """
-    if Angel is None:
-        try:
-            from angel import Angel
-        except ModuleNotFoundError:
-            Angel = None
+    #if Angel is None:
+    #    try:
+    #        from angel import Angel
+    #    except ModuleNotFoundError:
+    #        Angel = None
         
     if ig is None:
         raise ModuleNotFoundError("Optional dependency not satisfied: install igraph to use the selected feature.")
